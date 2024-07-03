@@ -1,24 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react';
+import TodoList from './TodoList1';
+import AddTodoForm from './AddTodoForm1';
 
 function App() {
-  const todoList = [
-    { id: 1, title: "Complete assignment" },
-    { id: 2, title: "Buy groceries" },
-    { id: 3, title: "Read a book" },
-  ];
-  
   return (
     <div>
       <h1>Todo List</h1>
-      <ul>
-        {todoList.map(todo => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+      <AddTodoForm />
+      <TodoList />
     </div>
   );
 }
+
 export default App;
+
