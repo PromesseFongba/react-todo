@@ -8,11 +8,10 @@ const AddTodoForm = ({ onAddTodo }) => {
 
   const handleAddTodo = (event) => {
     event.preventDefault();
-    const newTodo = {
+    onAddTodo({
       title: todoTitle,
       id: Date.now(),
-    };
-    onAddTodo(newTodo);
+    });
     setTodoTitle('');
   };
 
